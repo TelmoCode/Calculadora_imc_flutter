@@ -21,7 +21,10 @@ class _HomeState extends State<Home> {
   void _resetField() {
     weightControle.text = "";
     heightControle.text = "";
-    _infoText = "Informe seus dados";
+    setState(() {
+      _infoText = "Informe seus dados";
+    });
+
   }
 
   void _calculate(){
@@ -56,7 +59,7 @@ class _HomeState extends State<Home> {
           actions: [
             IconButton(
               icon: Icon(Icons.refresh), 
-              onPressed: _resetField
+              onPressed: _resetField,
               )
           ],
         ),
